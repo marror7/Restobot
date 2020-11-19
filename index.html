@@ -48,22 +48,37 @@
             </div>
         </section>
         <!-- Prices Section-->
-        <section class="page-section portfolio" id="services">
-            <div class="container- align-items-center">
-                <img class="masthead-avatar mb" src="assets/img/AppInfo.png" alt="" />
+        <section class="page-section portfolio" id="pricing">
+            <div class="container">
+                <div class="row">                    
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Licencias</h4>
+                        <div class="card" style="width: 18rem;">
+                            <ul class="list-group list-group-flush">
+                              <li class="list-group-item">6 meses: $300.000</li>
+                              <li class="list-group-item">1 ano: $500.000</li>
+                              <li class="list-group-item">3 anos: $1.200.000</li>
+                            </ul>
+                          </div>
+                    </div>
+                    <!-- Footer About -->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                                       
+                    </div>                    
+                </div>
             </div>
         </section>
         <!-- Team Section-->
         <section class="page-section portfolio" id="services">
-            <!-- Footer Team Text-->
             <div class="col-md-4">
                 <h4 class="text-uppercase mb-4">Creado por</h4>
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="teamCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
-                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                      <li data-target="#teamCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#teamCarousel" data-slide-to="1"></li>
+                      <li data-target="#teamCarousel" data-slide-to="2"></li>
+                      <li data-target="#teamCarousel" data-slide-to="3"></li>
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -91,58 +106,167 @@
                         </div>
                       </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <a class="carousel-control-prev" href="#teamCarousel" role="button" data-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="sr-only">Atras</span>
                     </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <a class="carousel-control-next" href="#teamCarousel" role="button" data-slide="next">
                       <span class="carousel-control-next-icon" aria-hidden="true"></span>
                       <span class="sr-only">Siguiente</span>
                     </a>
                   </div>
             </div>
         </section>
-        <!-- Opinion Section-->
-        <section class="page-section" id="opinion">
+        <!-- Register Section-->
+        <section class="page-section" id="register">
             <div class="container">
-                <!-- Opinion Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Opiniones</h2>
-                <!-- Opinion Section Form-->
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <!-- To configure the Opinion form email address, go to mail/Opinion_me.php and update the email address in the PHP file on line 19.-->
-                        <form id="OpinionForm" name="sentMessage" novalidate="novalidate">
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <input class="form-control" id="name" type="text" placeholder="Nombre" required="required" data-validation-required-message="Por favor ingrese nombre." />
-                                    <p class="help-block text-danger"></p>
+                <div class="row main">
+                    <div class="main-login main-center">
+                        <h5>Registro</h5>
+                        <form id="register_form" name="register_form" method="post" action="index.php">
+                            
+                            <div class="form-group">
+                                <label for="curr" class="cols-sm-2 control-label">Fecha Actual</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar fa" aria-hidden="true"></i></span>
+                                    <input type="date" class="form-control" name="curr" id="curr" data-validation="required">
                                 </div>
+                                <span id="error_curr" class="text-danger"></span>
                             </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <input class="form-control" id="email" type="email" placeholder="Email" required="required" data-validation-required-message="Por favor ingrese email." />
-                                    <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <label for="name" class="cols-sm-2 control-label">Nombres</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nombres" data-validation="required" />
+                                    </div>
                                 </div>
+                                <span id="error_name" class="text-danger"></span>
                             </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <input class="form-control" id="about" type="text" placeholder="Asunto" required="required" data-validation-required-message="Por favor escribe el asunto." />
-                                    <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <label for="lastname" class="cols-sm-2 control-label">Apellidos</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Apellidos" data-validation="required" />
+                                    </div>
                                 </div>
+                                <span id="error_lastname" class="text-danger"></span>
                             </div>
-                            <div class="control-group">
-                                <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                                    <textarea class="form-control" id="message" rows="5" placeholder="Escribe tu mensaje" required="required" data-validation-required-message="Por favor escribe un mensaje."></textarea>
-                                    <p class="help-block text-danger"></p>
+                            <div class="form-group">
+                                <label for="tipoId" class="cols-sm-2 control-label">Tipo de identificación</label>
+                                <select class="browser-default custom-select" id="tipoId">
+                                    <option selected>Tipo de identificación</option>
+                                    <option value="1">Cédula de ciudadanía</option>
+                                    <option value="2">NIT</option>
+                                    <option value="3">Cedula de extranjería</option>
+                                    <option value="4">Pasaporte</option>
+                                </select>
+                                <span id="error_lastname" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastname" class="cols-sm-2 control-label">Número de identificación</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                        <input type="number" class="form-control" name="lastname" id="idNum" placeholder="Número de identificación" data-validation="required" />
+                                    </div>
                                 </div>
+                                <span id="error_lastname" class="text-danger"></span>
                             </div>
-                            <br />
-                            <div id="success"></div>
-                            <div class="form-group"><button class="btn btn-primary btn-xl" id="sendMessageButton" type="submit">Enviar</button></div>
+                            <div class="form-group">
+                                <label for="genero" class="cols-sm-2 control-label">Genero</label>
+                                <select class="browser-default custom-select" id="genero">
+                                    <option selected>Genero</option>
+                                    <option value="1">Masculino</option>
+                                    <option value="2">Femenino</option>
+}                                </select>
+                                <span id="error_lastname" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="dob" class="cols-sm-2 control-label">Fecha de nacimiento</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-calendar fa" aria-hidden="true"></i></span>
+                                    <input type="date" class="form-control" name="dob" id="dob" data-validation="required">
+                                </div>
+                                <span id="error_dob" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="edad" class="cols-sm-2 control-label">Edad</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="edad" id="edad" data-validation="required" />
+                                    </div>
+                                </div>
+                                <span id="error_email" class="text-danger"></span>
+                            </div>
+                            <div class="container" style="width:600px;">
+                                <h2 align="center">JSON - Dynamic Dependent Dropdown List using Jquery and Ajax</h2><br /><br />
+                                <select name="country" id="country" class="form-control input-lg">
+                                 <option value="">Select country</option>
+                                </select>
+                                <br />
+                                <select name="state" id="state" class="form-control input-lg">
+                                 <option value="">Select state</option>
+                                </select>
+                                <br />
+                                <select name="city" id="city" class="form-control input-lg">
+                                 <option value="">Select city</option>
+                                </select>
+                               </div>
+                            <div class="form-group">
+                                <label for="email" class="cols-sm-2 control-label">Email</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Email" data-validation="required" />
+                                    </div>
+                                </div>
+                                <span id="error_email" class="text-danger"></span>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="username" name="username" class="cols-sm-2 control-label username">Nombre de usuario</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                        <input type="text" class="form-control" name="username" id="username" placeholder="Nombre de usuario" data-validation="required" />
+                                    </div>
+                                </div>
+                                <span id="error_username" class="text-danger"></span>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="password" class="cols-sm-2 control-label">Contraseña</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input type="password" class="form-control" name="password" id="password" placeholder="Contraseña" data-validation="required" />
+                                    </div>
+                                </div>
+                                <span id="error_password" class="text-danger"></span>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="confirm" class="cols-sm-2 control-label">Confirmar Contraseña</label>
+                                <div class="cols-sm-10">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                        <input type="password" class="form-control" name="confirm" id="confirm" placeholder="Confirmar Contraseña" data-validation="required" />
+                                    </div>
+                                </div>
+                                <span id="error_confirm" class="text-danger"></span>
+                            </div>
+        
+                            <div class="form-group ">
+                            <input type="submit" value="Submit" id="submit" class="btn btn-secondary center"/>
+                            </div>
+        
                         </form>
                     </div>
                 </div>
-            </div>
+            </div>     
         </section>
         <!-- Footer-->
         <footer class="footer text-center" id="page-bottom">
